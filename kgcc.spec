@@ -7,7 +7,7 @@ License:	GPL
 Group:		Development/Languages
 Source0:	ftp://gcc.gnu.org/pub/gcc/releases/gcc-%{version}/gcc-%{version}.tar.bz2
 # Source0-md5:	962a2057a2572226bc99aaeba4255e9b
-Requires:	binutils >= 2.9.1.0.18
+Requires:	binutils
 BuildRequires:	bison
 URL:		http://gcc.gnu.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
