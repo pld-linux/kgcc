@@ -2,7 +2,7 @@ Summary:	Kernel GNU C Compiler
 Summary(pl):	Kompilator GNU C dla jadra
 Name:		kgcc
 Version:	3.2.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages
 Source0:	ftp://gcc.gnu.org/pub/gcc/releases/gcc-%{version}/gcc-%{version}.tar.bz2
@@ -66,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %attr(755,root,root) %{_bindir}/kgcc
 %attr(755,root,root) %{_libdir}/gcc-lib/%{_target_cpu}*/*/cc1
-%attr(755,root,root) %{_libdir}/gcc-lib/%{_target_cpu}*/*/cpp*
+%attr(755,root,root) %{_libdir}/gcc-lib/%{_target_cpu}*/*/*cpp*
 %attr(755,root,root) %{_libdir}/gcc-lib/%{_target_cpu}*/*/collect2
 %{_libdir}/gcc-lib/%{_target_cpu}*/*/libgcc*
 %{_libdir}/gcc-lib/%{_target_cpu}*/*/specs
