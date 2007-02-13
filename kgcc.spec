@@ -1,5 +1,5 @@
 Summary:	Kernel GNU C Compiler
-Summary(pl.UTF-8):   Kompilator GNU C dla jadra
+Summary(pl.UTF-8):	Kompilator GNU C dla jadra
 Name:		kgcc
 Version:	3.2.2
 Release:	2
