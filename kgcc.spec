@@ -1,5 +1,5 @@
 Summary:	Kernel GNU C Compiler
-Summary(pl.UTF-8):	Kompilator GNU C dla jadra
+Summary(pl.UTF-8):	Kompilator GNU C dla jądra
 Name:		kgcc
 Version:	3.2.2
 Release:	2
@@ -7,14 +7,16 @@ License:	GPL
 Group:		Development/Languages
 Source0:	ftp://gcc.gnu.org/pub/gcc/releases/gcc-%{version}/gcc-%{version}.tar.bz2
 # Source0-md5:	962a2057a2572226bc99aaeba4255e9b
-Requires:	binutils
-BuildRequires:	bison
 URL:		http://gcc.gnu.org/
+BuildRequires:	bison
+Requires:	binutils
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Kernel GNU C Compiler.
 
 %description -l pl.UTF-8
+Kompilator GNU C dla jądra.
 
 %prep
 %setup -q -n gcc-%{version}
@@ -53,7 +55,9 @@ rm -rf $RPM_BUILD_ROOT
 cd obj-%{_target_platform}
 PATH=$PATH:/sbin:%{_sbindir}
 
-%{__make} prefix=$RPM_BUILD_ROOT%{_prefix} infodir=$RPM_BUILD_ROOT%{_prefix} install
+%{__make} install \
+	prefix=$RPM_BUILD_ROOT%{_prefix} \
+	infodir=$RPM_BUILD_ROOT%{_prefix}
 
 mv -f $RPM_BUILD_ROOT%{_bindir}/gcc $RPM_BUILD_ROOT%{_bindir}/kgcc
 
